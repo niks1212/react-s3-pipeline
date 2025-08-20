@@ -4,18 +4,12 @@ phases:
   install:
     commands:
       - echo Installing dependencies...
-      - cd react-app
       - npm install
   build:
     commands:
       - echo Build started...
-      - cd react-app
       - npm run build
 artifacts:
   files:
     - '**/*'
-  base-directory: react-app/build
-
-cache:
-  paths:
-    - 'react-app/node_modules/**/*'
+  base-directory: build
